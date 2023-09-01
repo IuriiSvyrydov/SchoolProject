@@ -1,0 +1,11 @@
+﻿global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.IdentityModel.Tokens;
+global using SchoolProject.Data.Entities.Identity;
+global using SchoolProject.Data.Helpers;
+global using SchoolProject.Infrastructure.InfrastructureBase.Abstracts;
+global using SchoolProject.Services.Abstract;
+global using SchoolProject.Services.Implements;
+global using System.IdentityModel.Tokens.Jwt;
+global using System.Security.Claims;
+global using System.Security.Cryptography;
+global using System.Text;

@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SchoolProject.Services\SchoolProject.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.6.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.6.0" />
+    <PackageReference Include="MailKit" Version="4.1.0" />
+    <PackageReference Include="MediatR" Version="12.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="7.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Authentication\Commands\Results\" />
+    <Folder Include="Features\Authentication\Queries\Handlers\" />
+    <Folder Include="Features\Authentication\Queries\Validators\" />
+    <Folder Include="Features\Authorization\Commands\Handlers\" />
+    <Folder Include="Features\Authorization\Commands\Models\" />
+    <Folder Include="Features\Authorization\Queries\Handlers\" />
+    <Folder Include="Features\Authorization\Queries\Results\" />
+    <Folder Include="Features\Departments\Commands\" />
+    <Folder Include="Features\Emails\Commands\Handlers\" />
+    <Folder Include="Features\Emails\Commands\Validators\" />
+    <Folder Include="Features\Emails\Queries\" />
+    <Folder Include="Features\Users\Commands\Handlers\" />
+    <Folder Include="Features\Users\Commands\Models\" />
+    <Folder Include="Features\Users\Commands\Validators\" />
+    <Folder Include="Features\Users\Queries\Handlers\" />
+    <Folder Include="Features\Users\Queries\Models\" />
+    <Folder Include="Features\Users\Queries\Results\" />
+    <Folder Include="Filters\" />
+    <Folder Include="Mapping\ApplicationUser\Commands\" />
+  </ItemGroup>
+
+</Project>
