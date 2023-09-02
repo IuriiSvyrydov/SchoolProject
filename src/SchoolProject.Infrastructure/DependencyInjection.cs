@@ -1,4 +1,7 @@
-﻿using SchoolProject.Infrastructure.Repositories.RefreshTokenRepo;
+﻿using SchoolProject.Data.Entities.Views;
+using SchoolProject.Infrastructure.Repositories.ProcedureRepo;
+using SchoolProject.Infrastructure.Repositories.RefreshTokenRepo;
+using SchoolProject.Infrastructure.Repositories.ViewRepo;
 
 namespace SchoolProject.Infrastructure;
 
@@ -26,6 +29,10 @@ public static class DependencyInjection
         services.AddScoped<IInstructorRepository, InsructorRepository>();
         services.AddScoped<ISubjectRepository, SubjectRepository>();
         services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
+        services.AddScoped<IDepartmentStudentCountProcRepository, DepartmentStudentCountProcRepository>();
+
+        //views
+        services.AddScoped<IViewRepository<ViewDepartment>, ViewDepartmentRepository>();
         return services;
     }
 

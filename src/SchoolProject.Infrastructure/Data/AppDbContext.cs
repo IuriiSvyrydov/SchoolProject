@@ -1,10 +1,10 @@
-﻿
-using EntityFrameworkCore.EncryptColumn.Extension;
+﻿using EntityFrameworkCore.EncryptColumn.Extension;
 using EntityFrameworkCore.EncryptColumn.Interfaces;
 using EntityFrameworkCore.EncryptColumn.Util;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using SchoolProject.Data.Entities.Identity;
+using SchoolProject.Data.Entities.Views;
 
 namespace SchoolProject.Infrastructure.Data;
 
@@ -28,6 +28,8 @@ public class AppDbContext : IdentityDbContext<User, Role, int, IdentityUserClaim
     public DbSet<StudentSubject> StudentSubjects { get; set; }
     public DbSet<DepartmentSubject> DepartmentSubjects { get; set; }
     public DbSet<UserRefreshToken> UserRefreshTokens { get; set; }
+    //Views
+    public DbSet<ViewDepartment> ViewDepartment { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new DepartmentConfiguration());

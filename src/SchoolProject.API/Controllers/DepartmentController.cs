@@ -13,4 +13,20 @@ public class DepartmentController : AppControllerBase
     {
         return NewResult(await Mediator.Send(query));
     }
+    [HttpGet(Router.DepartmentRouting.GetDepartmentStudentCount)]
+    public async Task<IActionResult> GetDepartmentStudentCount()
+    {
+        return NewResult(await Mediator.Send(new GetDepartmentStudentCountQuery()));
+    }
+
+    [HttpGet(Router.DepartmentRouting.GetDepartmentStudentCountById)]
+    public async Task<IActionResult> GetDepartmentStudentCountById([FromRoute] int id)
+    {
+        return NewResult(await Mediator.Send(new GetDepartmentStudentCountByIdQuery()
+        {
+            DID = id
+        }));
+        ;
+    }
 }
+

@@ -24,6 +24,8 @@ namespace SchoolProject.Data.AppMetaData
         {
             public const string Prefix = Rule + "Department";
             public const string GetById = Prefix + "/id";
+            public const string GetDepartmentStudentCount = Prefix + "/Department-Student-Count";
+            public const string GetDepartmentStudentCountById = Prefix + "/Get-DepartmentS-tudentCount-By-Id+/{id}";
         }
         public static class UserRouting
         {
